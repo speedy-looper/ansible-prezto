@@ -1,10 +1,10 @@
 ---
 
 galaxy_info:
-  author: Maxime Loliée
+  author: speed-of-light
   description: Install prezto for zsh.
   license: "license (MIT)"
-  min_ansible_version: 1.8
+  min_ansible_version: 2.0
   platforms:
   - name: EL
     versions:
