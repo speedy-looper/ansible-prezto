@@ -1,6 +1,7 @@
 # Ansible Role: Prezto
 
-[![Build Status](https://travis-ci.org/loliee/ansible-prezto.svg?branch=master)](https://travis-ci.org/loliee/ansible-prezto)
+[![Build
+Status](https://travis-ci.org/speedy-looper/ansible-prezto.svg?branch=master)](https://travis-ci.org/speedy-looper/ansible-prezto)
 
 Setup prezto zsh framework.
 
