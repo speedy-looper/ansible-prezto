@@ -3,10 +3,15 @@
 language: python
 python: "2.7"
 
+language: ruby
+rvm:
+  - 2.2.0
+
 before_install:
   - sudo apt-get update -qq
+  - rvm --default use 2.2.0
   - sudo apt-get install zsh
-  - sudo apt-get install ruby rubygems
+  - ruby -v
   - sudo useradd mtester -m -d /home/mtester -s /bin/bash
   - sudo chgrp ```id -gn``` /home/mtester
   - sudo chmod g+s /home/mtester
@@ -18,9 +23,10 @@ before_install:
   - sudo rm -f /home/mtester/.zshenv
   - umask 002
   - gem install serverspec
+  - sudo pip install --upgrade pip
 
 install:
-  - pip install ansible
+  - sudo pip install ansible
   - "{ echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg"
   - ansible-galaxy install -r requirements.yml -p ../ --force
 
