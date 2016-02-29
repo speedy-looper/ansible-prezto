@@ -1,9 +1,9 @@
 ---
 
-- src: loliee.zsh
-  name: ansible-zsh
+- src: https://github.com/speedy-looper/ansible-zsh
+  version: master
   path: ../
 
-- src: loliee.git
-  name: ansible-git
+- src: https://github.com/speedy-looper/ansible-git
+  version: master
   path: ../
