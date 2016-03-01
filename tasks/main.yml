@@ -21,7 +21,7 @@
     mode=0755
     owner={{ item.key }}
     path=~{{ item.key }}/.zprezto/
-  with_dict: __users__ | default({})
+  with_dict: '{{ __users__ | default({}) }}'
   when: >
     item.value.has_key('prezto_install') and item.value.prezto_install
 
@@ -31,7 +31,7 @@
     line="\n# Source prezto \n{{ prezto_source }}"
     regexp="zprezto/init.zsh"
     state=present
-  with_dict: __users__ | default({})
+  with_dict: '{{ __users__ | default({}) }}'
   when: >
     item.value.has_key('prezto_install') and item.value.prezto_install
 
@@ -41,7 +41,7 @@
     owner={{ item.key }}
     src=zlogin.j2
     dest=~{{ item.key }}/.zlogin
-  with_dict: __users__ | default({})
+  with_dict: '{{ __users__ | default({}) }}'
   when: >
     item.value.has_key('prezto_install') and item.value.prezto_install
 
@@ -51,7 +51,7 @@
     owner={{ item.key }}
     src=zlogout.j2
     dest=~{{ item.key }}/.zlogout
-  with_dict: __users__ | default({})
+  with_dict: '{{ __users__ | default({}) }}'
   when: >
     item.value.has_key('prezto_install') and item.value.prezto_install
 
@@ -61,7 +61,7 @@
     owner={{ item.key }}
     src=zprofile.j2
     dest=~{{ item.key }}/.zprofile
-  with_dict: __users__ | default({})
+  with_dict: '{{ __users__ | default({}) }}'
   when: >
     item.value.has_key('prezto_install') and item.value.prezto_install
 
@@ -71,7 +71,7 @@
     owner={{ item.key }}
     src=zpreztorc.j2
     dest=~{{ item.key }}/.zpreztorc
-  with_dict: __users__ | default({})
+  with_dict: '{{ __users__ | default({}) }}'
   when: >
     item.value.has_key('prezto_install') and item.value.prezto_install
 
@@ -81,6 +81,6 @@
     owner={{ item.key }}
     src=zshenv.j2
     dest=~{{ item.key }}/.zshenv
-  with_dict: __users__ | default({})
+  with_dict: '{{ __users__ | default({}) }}'
   when: >
     item.value.has_key('prezto_install') and item.value.prezto_install
