@@ -34,6 +34,10 @@ script:
   # Check machine pre-test state.
   - rspec tests/spec/before_test_spec.rb
 
+  # nothing should happened if install_prezto is false
+  - ansible-playbook -i ./tests/inventory tests/playbooks/skip.yml --connection=local --sudo
+  - rspec tests/spec/before_test_spec.rb
+
   # Check syntax
   - ansible-playbook -i tests/inventory ./tests/playbooks/main.yml --syntax-check --list-tasks
 

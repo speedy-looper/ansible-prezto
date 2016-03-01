@@ -10,8 +10,9 @@
        dest=~{{ item.key }}/.zprezto/
        track_submodules=yes
        force=yes
+       version={{ item.value.get('prezto_version', 'master') }}
        update=no
-  with_dict: __users__ | default({})
+  with_dict: '{{ __users__ | default({}) }}'
   when: >
       item.value.has_key('prezto_install') and item.value.prezto_install
 

@@ -4,19 +4,27 @@ prezto_repo_url: https://github.com/sorin-ionescu/prezto
 prezto_source: '[[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]] && source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"'
 prezto_zpreztorc_default_content: |
   zstyle ':prezto:*:*' color 'yes'
-  zstyle ':prezto:load' pmodule \
-  'environment' \
-    'terminal' \
-    'editor' \
-    'history' \
-    'directory' \
-    'spectrum' \
-    'utility' \
-    'ssh' \
-    'completion' \
-    'syntax-highlighting' \
-    'history-substring-search' \
-    'prompt' \
+  zstyle ":prezto:load" pmodule \
+    "environment" \
+    "terminal" \
+    "editor" \
+    "tmux" \
+    "homebrew" \
+    "history" \
+    "python" \
+    "ruby" \
+    "node" \
+    "osx" \
+    "rsync" \
+    "directory" \
+    "git" \
+    "gpg" \
+    "spectrum" \
+    "utility" \
+    "completion" \
+    "syntax-highlighting" \
+    "history-substring-search" \
+    "prompt"
 
   zstyle ':prezto:module:terminal' auto-title 'yes'
   zstyle ':prezto:module:prompt' theme 'mlpure'
@@ -30,6 +38,7 @@ prezto_zpreztorc_default_content: |
     'brackets' \
     'pattern' \
     'cursor'
+
   zstyle ':prezto:module:syntax-highlighting' styles \
     'builtin' 'fg=green' \
     'command' 'fg=green' \

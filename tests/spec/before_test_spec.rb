@@ -12,28 +12,28 @@ end
 
 describe file('/home/mtester/.zlogin') do
   it { should_not be_file }
-  its(:content) { should_not contain /# Ansible managed:/ }
+  its(:content) { should_not contain(/# Ansible managed:/) }
 end
 
 describe file('/home/mtester/.zlogout') do
   it { should_not be_file }
-  its(:content) { should_not contain /# Ansible managed:/ }
+  its(:content) { should_not contain(/# Ansible managed:/) }
 end
 
 describe file('/home/mtester/.zpreztorc') do
   it { should_not be_file }
-  its(:content) { should_not contain /zstyle ':prezto:load' module/ }
-  its(:content) { should_not contain /# Ansible managed:/ }
+  its(:content) { should_not contain(/zstyle ':prezto:load' module/) }
+  its(:content) { should_not contain(/# Ansible managed:/) }
 end
 
 describe file('/home/mtester/.zprofile') do
   it { should_not be_file }
-  its(:content) { should_not contain /# Ansible managed:/ }
+  its(:content) { should_not contain(/# Ansible managed:/) }
 end
 
 describe file('/home/mtester/.zshenv') do
   it { should_not be_file }
-  its(:content) { should_not contain /# Ansible managed:/ }
+  its(:content) { should_not contain(/# Ansible managed:/) }
 end
 
 describe user('mtester') do
