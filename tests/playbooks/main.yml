@@ -7,7 +7,7 @@
     __users__:
       mtester:
         prezto_install: Yes
-        prezto_editor: vim
+        prezto_editor: vi
         prezto_version: 38baf39513ff76379931db5bee0f2db2b8b0e93c
   roles:
     - role: ansible-prezto
