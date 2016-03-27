@@ -1,9 +1,3 @@
 ---
 
-- src: https://github.com/speedy-looper/ansible-zsh
-  version: master
-  path: ../
-
-- src: https://github.com/speedy-looper/ansible-git
-  version: master
-  path: ../
+- src: speedy-looper.console
