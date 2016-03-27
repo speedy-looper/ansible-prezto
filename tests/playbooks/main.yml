@@ -10,4 +10,7 @@
         prezto_editor: vi
         prezto_version: 38baf39513ff76379931db5bee0f2db2b8b0e93c
   roles:
+    - role: speedy-looper.console
+      console:
+        user: mtester
     - role: ansible-prezto

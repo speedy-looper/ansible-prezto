@@ -1,3 +1,5 @@
 ---
 
-- src: speedy-looper.console
+- src: https://github.com/speedy-looper/ansible-console
+  name: speedy-looper.console
+  path: ../
